@@ -1,5 +1,5 @@
 const request = require('supertest')
-const server = require('../src/server')
+const app = require('../src/app')
 const knex = require('../src/database/knex')
 const knexCleaner = require('knex-cleaner')
 
@@ -24,7 +24,7 @@ describe('Test basic server functionality', () => {
   it('reaches the root path', async () => {})
 
   it('connects to knex', async () => {
-    const result = await knex.raw('select 1+1 as result')
+    const result = await knex.select(knex.raw('1'))
     expect(result).toBeTruthy()
   })
 })

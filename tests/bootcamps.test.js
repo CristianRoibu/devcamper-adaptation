@@ -1,5 +1,5 @@
 const request = require('supertest')
-const server = require('../src/server')
+const app = require('../src/app')
 const knex = require('../src/database/knex')
 const knexCleaner = require('knex-cleaner')
 const uuid = require('uuid')
@@ -34,7 +34,7 @@ describe('bootcamps functionality', () => {
 
   it('POST /bootcamps introduces new item to database', async () => {
     const id = uuid.v4()
-    const result = await request(server)
+    const result = await request(app)
       .post('/api/v1/bootcamps')
       .send({ uid: id })
     const query = await knex('bootcamps')
