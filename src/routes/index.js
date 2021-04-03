@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-const bootcamps = require('./bootcamps-rtr')
+const bootcamps = require('./bootcamps-router')
 
 router.use(bootcamps)
 

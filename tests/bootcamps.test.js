@@ -42,4 +42,12 @@ describe('bootcamps functionality', () => {
     expect(result.body[0]).toBe(1)
     expect(query[0].uid).toBe(id)
   })
+
+  it('POST /bootcamps validation : return error if not uuid', async () => {
+    const result = await request(app)
+      .post('/api/v1/bootcamps')
+      .send({ uid: 'asd' })
+    expect(result.status).toBe(500)
+    expect(result.body.message).toBe('uid must be uuid')
+  })
 })

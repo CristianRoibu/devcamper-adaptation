@@ -1,4 +1,5 @@
 const knex = require('../database/knex')
+// const uuid = require('uuid')
 
 // @desc   GET /api/v1/bootcamps ; Public
 exports.get = (req, res, next) => {
@@ -12,6 +13,7 @@ exports.getOne = (req, res, next) => {
 
 // @desc   POST /api/v1/bootcamps  ; Private
 exports.post = async (req, res, next) => {
+  // const uid = uuid.v4()
   const { uid } = req.body
   const result = await knex('bootcamps').insert({ uid: uid })
   res.status(201).json(result)
