@@ -65,7 +65,7 @@ describe('bootcamps functionality', () => {
       .post('/api/v1/bootcamps')
       .send({ ...validBootcamp, uid: uid })
     expect(response.status).toBe(500)
-    expect(response.body.message).toBe('uid already present in database')
+    expect(response.body.message).toBe('bootcamp could not be created')
   })
 
   const uid_invalid = 'uid : must be type uuid'

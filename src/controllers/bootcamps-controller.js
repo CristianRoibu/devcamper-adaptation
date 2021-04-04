@@ -26,7 +26,7 @@ exports.post = async (req, res, next) => {
     await knex('bootcamps').insert({ uid, name, description })
     res.status(201).json({ message: 'bootcamp inserted successfully' })
   } catch (err) {
-    err.message = 'uid already present in database'
+    err.message = 'bootcamp could not be created'
     return next(err)
   }
 }

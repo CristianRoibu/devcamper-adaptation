@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const ctrl = require('../controllers/bootcamps-controller')
 
-const validation = require('../validations/validation')
+const validation = require('../middlewares/validation')
 const bootcampsSchema = require('../validations/bootcamps-schema')
 
 router.get('/bootcamps', ctrl.get)
