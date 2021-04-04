@@ -1,7 +1,7 @@
 {
   "name": "devcamp-api-sql",
   "version": "1.0.0",
-  "description": "Adaptation of the devcamp project from Brad Traversy on Udemy.",
+  "description": "Simple boilerplate.",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon index.js",

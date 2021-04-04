@@ -1,6 +1,6 @@
 # devcamper-adaptation
 
-Adaptation of the devcamp project from Brad Traversy on Udemy.  
+Simple Boilerplate. Adaptation of the devcamp project from Brad Traversy on Udemy.  
 https://github.com/bradtraversy/devcamper-api
 
 Slightly different architecture.  

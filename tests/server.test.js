@@ -17,11 +17,14 @@ afterAll(async () => {
 })
 
 describe('Test basic server functionality', () => {
-  it('testng is working', () => {
+  it('testing is working', () => {
     expect(true).toBe(true)
   })
 
-  it('reaches the root path', async () => {})
+  it('returns error on invalid path', async () => {
+    const response = await request(app).get('/asd').send()
+    expect(response.status).toBe(404)
+  })
 
   it('connects to knex', async () => {
     const result = await knex.select(knex.raw('1'))
